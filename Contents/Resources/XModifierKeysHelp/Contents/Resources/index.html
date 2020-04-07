@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>XModifierKeys Reference</title>
+		<meta name="AppleTitle" content="XModifierKeys Reference" />
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="assets/default.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="XModifierKeys, AppleScript" />
+		<script type="text/javascript" src="assets-helpbook/run_helpscript.js"></script>
+		<script type="text/javascript" src="assets/navibar-jump.js"></script>
+        <link id="helpviewer-handler-helper" href="assets-helpbook/helpviewer-handler-helper.scpt" />
+        <script type="text/javascript" src="assets-helpbook/helpviewer-handler-enable.js"></script>
+        <link href="./" id="HelpBookRoot" />
+	</head>
+
+	<body>
+		<div id="navi-bar">
+			<div class="edit-script-link">
+				<a onclick="return runHelpScriptWithBundleRoot(this)" href="assets-helpbook/editScript.scpt">Edit Script</a>
+			</div>
+			<div class="left-contents">
+			<div class="to-root">
+				<!-- InstanceBeginEditable name="to-root" --><!-- InstanceEndEditable -->
+			</div>
+			<select onchange="navibarJump(this)">
+<option value="">
+§
+</option>
+<option value="#Example">
+Example
+</option>
+<option value="#Constructor_Method">
+Constructor Method
+</option>
+<option value="#make">
+- make
+</option>
+<option value="#Instance_Methods">
+Instance Methods
+</option>
+<option value="#is_command_pressed">
+- is_command_pressed
+</option>
+<option value="#is_option_pressed">
+- is_option_pressed
+</option>
+<option value="#is_control_pressed">
+- is_control_pressed
+</option>
+<option value="#is_function_pressed">
+- is_function_pressed
+</option>
+<option value="#is_shift_pressed">
+- is_shift_pressed
+</option>
+<option value="#is_capslock_pressed">
+- is_capslock_pressed
+</option>
+</select>
+			</div>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+		<div id="contents">
+		<h1>XModifierKeys Reference</h1>
+<ul>
+<li>Version : 1.0</li>
+<li>Author : Kurita Tetsuro <a href="mailto:scriptfactory@mac.com">scriptfactory@mac.com</a></li>
+<li>Requirements : OS X 10.9 or later</li>
+<li><a href="http://www.script-factory.net/XModules/XModifierKeys/en/index.html">Home page</a> || <a href="http://www.script-factory.net/XModules/XModifierKeys/changelog.html">ChangeLog</a> || <a href="https://github.com/tkurita/XModifierKeys.scptd">Repository</a> </li>
+</ul>
+<p>XModifierKeys is a library to obtain status of modifier keys.</p>
+<p>This library allow to scripts change the behavior depending of the status of modifier keys.</p>
+<h2 id="Example">Example</h2>
+<div class="sourceCode">
+<div class="scriptButton">
+    <input type="button" value="Open this script" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20XModifierKeys%20:%20script%20%22XModifierKeys%22%0D%0Ddelay%201%20--%20provide%20time%20to%20press%20keys%0Dtell%20(make%20XModifierKeys)%0D%09if%20is_command_pressed()%20then%20log%20%22Command%20key%20is%20pressed%22%0D%09if%20is_option_pressed()%20then%20log%20%22Option%20key%20is%20pressed%22%0D%09if%20is_control_pressed()%20then%20log%20%22Control%20key%20is%20pressed%22%0D%09if%20is_function_pressed()%20then%20log%20%22Function%20key%20is%20pressed%22%0D%09if%20is_shift_pressed()%20then%20log%20%22Shift%20key%20is%20pressed%22%0D%09if%20is_capslock_pressed()%20then%20log%20%22Caps%20lock%20key%20is%20pressed%22%0Dend%20tell%0D" />
+</div><div>
+<span class="langKeyword">use</span> <span class="userDefine">XModifierKeys</span><span class="normal"> : </span><span class="className">script</span><span class="normal"> &quot;XModifierKeys&quot;</span>
+</div>
+<br />
+<div>
+<span class="commandName">delay</span><span class="normal"> 1 </span><span class="comment">-- provide time to press keys</span>
+</div>
+<div>
+<span class="langKeyword">tell</span><span class="normal"> (</span><span class="commandName">make</span> <span class="userDefine">XModifierKeys</span><span class="normal">)</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_command_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Command key is pressed&quot;</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_option_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Option key is pressed&quot;</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_control_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Control key is pressed&quot;</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_function_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Function key is pressed&quot;</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_shift_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Shift key is pressed&quot;</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">if</span> <span class="userDefine">is_capslock_pressed</span><span class="normal">() </span><span class="langKeyword">then</span> <span class="commandName">log</span><span class="normal"> &quot;Caps lock key is pressed&quot;</span>
+</div>
+<div>
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+</div>
+<h2 id="Constructor_Method">Constructor Method</h2>
+<h3 id="make"><a href="pages/make.html">make</a></h3>
+<p>Make an instance of XModifierKeys and caputre current status of modifier keys.</p>
+<h2 id="Instance_Methods">Instance Methods</h2>
+<h3 id="is_command_pressed"><a href="pages/is_command_pressed.html">is_command_pressed</a></h3>
+<p>Return true if command key is pressed.</p>
+<h3 id="is_option_pressed"><a href="pages/is_option_pressed.html">is_option_pressed</a></h3>
+<p>Return true if option key is pressed.</p>
+<h3 id="is_control_pressed"><a href="pages/is_control_pressed.html">is_control_pressed</a></h3>
+<p>Return true if control key is pressed.</p>
+<h3 id="is_function_pressed"><a href="pages/is_function_pressed.html">is_function_pressed</a></h3>
+<p>Return true if function key is pressed.</p>
+<h3 id="is_shift_pressed"><a href="pages/is_shift_pressed.html">is_shift_pressed</a></h3>
+<p>Return true if shift key is pressed.</p>
+<h3 id="is_capslock_pressed"><a href="pages/is_capslock_pressed.html">is_capslock_pressed</a></h3>
+<p>Return true if caps lock is on.</p>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+	</body>
+
+</html>
